@@ -13,7 +13,7 @@ export default function ChatbotWidget() {
   useEffect(() => {
     async function getUserId() {
       try {
-        const res = await axios.get('/chatbot/get_chatbot_user', {
+        const res = await axios.get(BASE_URL + '/chatbot/get_chatbot_user', {
           credentials: 'same-origin'
         });
         if (!res.ok) throw new Error('No autorizado');

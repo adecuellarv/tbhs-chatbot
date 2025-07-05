@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://localhost:8888/tbhs-actions/chatbot'
+export const BASE_URL = '/tbhs-actions'
