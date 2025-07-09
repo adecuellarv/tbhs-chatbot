@@ -88,14 +88,14 @@ export default function ChatbotWidget() {
             <div className="flex-1 overflow-y-auto p-3 space-y-2">
               {messages.map((msg, idx) => (
                 <div key={idx} className="flex flex-col">
-                  {msg.pregunta && (
+                  {msg.remitent === 'user' && (
                     <div className="self-end bg-blue-100 text-blue-800 px-3 py-2 rounded-lg max-w-[75%] text-sm">
-                      {msg.pregunta}
+                      {msg.message}
                     </div>
                   )}
-                  {msg.respuesta && (
+                  {msg.remitent === 'ia' && (
                     <div className="self-start bg-gray-100 text-gray-800 px-3 py-2 rounded-lg max-w-[75%] text-sm">
-                      {msg.respuesta}
+                      {msg.message}
                     </div>
                   )}
                 </div>
