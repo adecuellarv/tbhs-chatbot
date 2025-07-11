@@ -21,3 +21,33 @@ code {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.dots::after {
+  content: '';
+  display: inline-block;
+  animation: dotty 1.2s steps(4, end) infinite;
+}
+
+@keyframes dotty {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Puedes poner esto en tu CSS global si no usas typography plugin */
+.chat-html p {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.chat-html ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.chat-html li {
+  margin-bottom: 0.25rem;
+}
